@@ -14,7 +14,7 @@ public:
     void RotateY(float angle);
     void RotateX(float angle);
     void RotateZ(float angle);
-    void Rotate(float angle); /
+    void Rotate(float angle);
     void Scale(float amount);
     vec4 GetPosition();
     void Render(Shader& shader); 

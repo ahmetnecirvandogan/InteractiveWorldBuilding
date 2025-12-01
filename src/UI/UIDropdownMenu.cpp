@@ -18,9 +18,11 @@ UIDropdownMenu::UIDropdownMenu(float x, float y, float width, float itemHeight)
 }
 
 void UIDropdownMenu::AddMenuItem(const std::string& text, std::function<void()> callback, const std::string& res_path) {
-    float itemY = m_y + (m_menuItems.size() + 1) * (m_itemHeight + m_itemSpacing);
+    // Calculate target position going upward (negative Y offset) to match UpdateItemPositions
+    float targetY = m_y - (m_menuItems.size() + 1) * (m_itemHeight + m_itemSpacing);
     
-    auto button = std::make_shared<UIButton>(m_x, itemY, m_width, m_itemHeight, text);
+    // Create button at initial position (m_y) - it will animate to targetY when opened
+    auto button = std::make_shared<UIButton>(m_x, m_y, m_width, m_itemHeight, text);
    
     // Style the menu item buttons
     button->SetNormalColor(vec3(0.6f, 0.6f, 0.6f)); 
@@ -41,8 +43,8 @@ void UIDropdownMenu::AddMenuItem(const std::string& text, std::function<void()> 
     
     MenuItem item;
     item.button = button;
-    item.targetY = itemY;
-    item.currentY = m_y; // Start at the top (closed position)
+    item.targetY = targetY;
+    item.currentY = m_y; // Start at the button position (closed position)
     
     m_menuItems.push_back(item);
     

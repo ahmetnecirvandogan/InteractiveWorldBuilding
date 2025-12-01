@@ -1,5 +1,11 @@
 {
     "cmake.cmakePath": "/opt/homebrew/bin/cmake",
+    "code-runner.executorMap": {
+        "cpp": "cd \"$workspaceRoot\" && g++ -std=c++17 -DGL_SILENCE_DEPRECATION -I./include -I./src -I/opt/homebrew/include -L/opt/homebrew/lib -lglfw -framework OpenGL -lassimp -lsfml-audio src/main.cpp src/Core/Window.cpp src/Core/Shader.cpp src/Core/ShaderManager.cpp src/Core/Camera.cpp src/Core/Texture.cpp src/Core/stb_image_impl.cpp src/Core/CelestialLightManager.cpp src/Core/light.cpp src/Core/Material.cpp src/Core/ShadowMap.cpp src/Core/AudioManager.cpp src/Core/ObjectConfig.cpp src/Grid/BaseGrid.cpp src/Grid/TerrainGrid.cpp src/Grid/GridMesh.cpp src/Grid/TerrainGenerator.cpp src/ObjectLoader/ObjectLoader.cpp src/ObjectLoader/GameObject.cpp src/ObjectLoader/GameObjectManager.cpp src/UI/UIRenderer.cpp src/UI/UIElement.cpp src/UI/UIButton.cpp src/UI/UIDropdownMenu.cpp -o TerrainDemo && ./TerrainDemo"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.preserveFocus": false,
+    "code-runner.clearPreviousOutput": true,
     "files.associations": {
         "iostream": "cpp",
         "ios": "cpp",

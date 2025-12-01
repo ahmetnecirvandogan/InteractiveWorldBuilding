@@ -523,7 +523,7 @@ private:
         std::cout << "Loading object configurations..." << std::endl;
         
         // Load object configurations from file
-        objectConfigs = loadObjectConfigs("../ObjectPaths.txt");
+        objectConfigs = loadObjectConfigs("ObjectPaths.txt");
         std::cout << "Loaded " << objectConfigs.size() << " object configurations" << std::endl;
         
         objectManager = new GameObjectManager();
