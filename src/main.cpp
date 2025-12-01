@@ -102,7 +102,7 @@ public:
             std::cerr << "Shadow Map initialization failed!" << std::endl;
             // Handle error appropriately
         }
-        AudioManager::getInstance().playMusic("../include/music.mp3");
+        AudioManager::getInstance().playMusic("include/music.mp3");
     }
 
     void Run()
@@ -507,7 +507,7 @@ public:
 private:
     void CreateWindow()
     {
-        window = std::make_unique<Window>(WINDOW_WIDTH, WINDOW_HEIGHT, "Unified Shader Demo");
+        window = std::make_unique<Window>(WINDOW_WIDTH, WINDOW_HEIGHT, "Interactive World Builder");
     }
 
     void InitCallbacks()
