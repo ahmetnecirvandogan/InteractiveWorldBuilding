@@ -72,6 +72,50 @@ An interactive, real-time sandbox-style terrain manipulation and world-building 
 - **Assimp**: 3D model loading
 - **Custom Engine Components**: UI, camera, terrain, lighting
 
+## 📦 Prerequisites (macOS)
+
+Install required dependencies using [Homebrew](https://brew.sh/):
+
+```bash
+brew install cmake glfw assimp sfml
+```
+
+## 🚀 How to Compile & Run
+
+### Option 1: Direct Build Command (Fastest)
+From the project root directory, run:
+
+```bash
+g++ -std=c++17 -DGL_SILENCE_DEPRECATION \
+    -I./include -I./src -I/opt/homebrew/include \
+    -L/opt/homebrew/lib -lglfw -framework OpenGL -lassimp -lsfml-audio \
+    src/main.cpp src/Core/*.cpp src/Grid/*.cpp src/ObjectLoader/*.cpp src/UI/*.cpp \
+    -o TerrainDemo && ./TerrainDemo
+```
+
+> **Note (VS Code users):** You can also run the project directly using the **Code Runner** extension (**⌃⌥N** / Ctrl+Option+N), which is pre-configured in `.vscode/settings.json`.
+
+---
+
+### Option 2: Using CMake
+```bash
+# 1. Generate build files
+cmake -B build
+
+# 2. Build executable
+cmake --build build
+
+# 3. Run demo
+cd build && ./TerrainDemo
+```
+
+---
+
+### Running the Existing Binary
+If already compiled, simply run from the project root:
+```bash
+./TerrainDemo
+```
 
 ## 👥 Team
 
