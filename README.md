@@ -17,12 +17,12 @@ An interactive, real-time sandbox-style terrain manipulation and world-building 
 ## 🖼 Screenshots
 
 <p align="center">
-  <img src="docs/volcanic_caldera.png" width="300"/>
-  <img src="docs/fault_formation.png" width="300"/>
-  <img src="docs/texture_painting.png" width="300"/>
-  <img src="docs/day_night_cycle.png" width="300"/>
-  <img src="docs/shadows.png" width="300"/>
-  <img src="docs/ui_elements.png" width="300"/>
+  <img src="project_screenshot1.png" width="300"/>
+  <img src="project_screenshot2.png" width="300"/>
+  <img src="project_screenshot3.png" width="300"/>
+  <img src="project_screenshot4.png" width="300"/>
+  <img src="project_screenshot5.png" width="300"/>
+  <img src="project_screenshot6.png" width="300"/>
 </p>
 
 ## 🧱 System Architecture Overview
@@ -123,10 +123,3 @@ If already compiled, simply run from the project root:
 - Ahmet Neçirvan Doğan  
 - Eray Önder  
 - Ada Yıldız  
-
-## 📌 Notes
-
-- The water rendering system is fully functional in isolation but excluded from the demo due to integration limitations.
-- Developed as a part of the COMP510 course to showcase real-time computer graphics principles.
-
----
